@@ -1,11 +1,15 @@
 @import "tailwindcss";
 @import "@mantine/core/styles.css";
+@import "@mantine/notifications/styles.css";
 
 @theme {
+  /* configs iniciais */
   --color-*: initial;
   --spacing-*: initial;
   --breakpoint-*: initial;
 
+  /* cores do design system */
+  --color-white: #ffffff;
   --color-primary-50: #edf8fd;
   --color-primary-100: #dbedf5;
   --color-primary-200: #b2daed;
@@ -21,8 +25,8 @@
   --color-neutral-default: #52525b;
   --color-neutral-muted: #a1a1aa;
 
-  --font-sans: var(--font-figtree);
-
+  /* espaçamentos e breakpoints */
+  --spacing-2: 8px;
   --spacing-5: 20px;
   --spacing-8: 32px;
   --spacing-12: 48px;
@@ -36,4 +40,55 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+
+  /* tipografia */
+  --font-sans: var(--font-figtree);
+
+  --fs-hero: 32px;
+  --lh-hero: 1.2;
+  --ls-hero: -0.02em;
+
+  --fs-section: 22px;
+  --lh-section: 1.2;
+  --ls-section: -0.01em;
+
+  --fs-body: 16px;
+  --lh-body: 1.4;
+  --ls-body: 0em;
+}
+
+/* sm */
+@media (width >= 632px) {
+  @theme {
+    --fs-hero: 36px;
+    --fs-section: 28px;
+    --fs-body: 16px;
+  }
+}
+
+/* md */
+@media (width >= 768px) {
+  @theme {
+    --fs-hero: 36px;
+    --fs-section: 36px;
+    --fs-body: 16px;
+  }
+}
+
+/* lg */
+@media (width >= 1024px) {
+  @theme {
+    --fs-hero: 64px;
+    --fs-section: 36px;
+    --fs-body: 18px;
+  }
+}
+
+/* xl */
+@media (width >= 1280px) {
+  @theme {
+    --fs-hero: 64px;
+    --fs-section: 36px;
+    --fs-body: 18px;
+  }
 }

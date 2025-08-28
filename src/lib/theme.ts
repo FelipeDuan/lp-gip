@@ -1,4 +1,4 @@
-import type { MantineThemeOverride } from "@mantine/core";
+import { type MantineThemeOverride, rem } from "@mantine/core";
 
 export const theme: MantineThemeOverride = {
   fontFamily: "var(--font-sans)",
@@ -18,4 +18,11 @@ export const theme: MantineThemeOverride = {
     ],
   },
   primaryColor: "primary",
+  fontSizes: {
+    xs: rem(12),
+    sm: rem(14),
+    md: rem(16),
+    lg: rem(18),
+    xl: rem(22),
+  },
 };
