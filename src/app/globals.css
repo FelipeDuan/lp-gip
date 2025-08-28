@@ -3,6 +3,8 @@
 
 @theme {
   --color-*: initial;
+  --spacing-*: initial;
+  --breakpoint-*: initial;
 
   --color-primary-50: #edf8fd;
   --color-primary-100: #dbedf5;
@@ -20,4 +22,18 @@
   --color-neutral-muted: #a1a1aa;
 
   --font-sans: var(--font-figtree);
+
+  --spacing-5: 20px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 632px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
