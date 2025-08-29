@@ -1,7 +1,7 @@
 "use client";
 
 import { Anchor, Button, Group, Text } from "@mantine/core";
-import { HeaderLink } from "../ui/header-link";
+import { HeaderLink } from "./header-link";
 
 export function Header() {
   const navMobile = [
