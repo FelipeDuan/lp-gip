@@ -24,9 +24,11 @@
   --color-neutral-emphasis: #18181b;
   --color-neutral-default: #52525b;
   --color-neutral-muted: #a1a1aa;
+  --color-border: #d4d4d8;
 
   /* espaçamentos e breakpoints */
   --spacing-2: 8px;
+  --spacing-3: 12px;
   --spacing-5: 20px;
   --spacing-8: 32px;
   --spacing-12: 48px;
@@ -34,6 +36,7 @@
   --spacing-20: 80px;
   --spacing-24: 96px;
   --spacing-32: 128px;
+  --spacing-42: 168px;
 
   --breakpoint-xs: 320px;
   --breakpoint-sm: 632px;
@@ -43,6 +46,7 @@
 
   /* tipografia */
   --font-sans: var(--font-figtree);
+  --text-heading-hero: 32px;
 
   --fs-hero: 32px;
   --lh-hero: 1.2;

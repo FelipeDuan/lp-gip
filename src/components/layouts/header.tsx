@@ -1,35 +1,61 @@
 "use client";
-import { Burger, Drawer } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+
+import { Anchor, Button, Group, Text } from "@mantine/core";
 import { HeaderLink } from "../ui/header-link";
 
 export function Header() {
-  const [opened, { open, close }] = useDisclosure();
-
-  const NAV = [
+  const navMobile = [
     { label: "Projetos e Programas", href: "/projetos" },
     { label: "Diálogos", href: "/dialogos" },
     { label: "OPA", href: "/opa" },
   ];
 
+  const navDesktop = [
+    { label: "Diálogos" },
+    { label: "OPA" },
+    { label: "dadosPI" },
+    { label: "Pactos pelo Piauí" },
+    { label: "Retribuir" },
+    { label: "PSI" },
+    { label: "Pilares" },
+  ];
+
   return (
-    <header className="flex items-center py-2 px-5 text-white justify-between bg-primary-600 w-full">
-      <HeaderLink label="Projetos e Programas" href="/projetos" items={NAV} />
+    <header className="flex items-center py-2 px-5 text-white justify-between bg-primary-600 w-full lg:px-8">
+      <div className="lg:hidden">
+        <HeaderLink
+          label="Projetos e Programas"
+          href="/projetos"
+          items={navMobile}
+        />
+      </div>
 
-      <Burger opened={opened} onClick={open} color="white" />
+      <div className="hidden lg:flex">
+        <Group justify="center" gap={"lg"}>
+          <Button
+            variant="default"
+            radius={"md"}
+            c={"var(--color-neutral-default)"}
+          >
+            Site da Seplan
+          </Button>
 
-      <Drawer
-        offset={8}
-        radius={"md"}
-        opened={opened}
-        onClose={close}
-        position="right"
-        title="Menu"
-      >
-        {
-          // ToDo: aqui eu preencho depois
-        }
-      </Drawer>
+          {navDesktop.map((item) => (
+            <Anchor
+              key={`item-${item.label}`}
+              underline="hover"
+              c={"white"}
+              size="md"
+            >
+              {item.label}
+            </Anchor>
+          ))}
+        </Group>
+      </div>
+
+      <Text fw={700} size="lg">
+        Logo
+      </Text>
     </header>
   );
 }
