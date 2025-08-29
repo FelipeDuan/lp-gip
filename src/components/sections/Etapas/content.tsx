@@ -19,6 +19,7 @@ export function EtapasContent() {
         c="var(--color-neutral-default)"
         fz={{ base: "sm", md: "md" }}
         lh={1.6}
+        fw={500}
       >
         O modelo GIP organiza o ciclo de vida dos projetos em 5 etapas
         estratégicas, baseadas nas melhores práticas nacionais e internacionais.

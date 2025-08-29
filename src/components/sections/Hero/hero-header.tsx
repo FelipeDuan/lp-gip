@@ -15,7 +15,7 @@ export function HeroHeader() {
   ];
 
   return (
-    <header className="flex w-full justify-between items-center px-5 py-2 border-b-2 border-b-border sm:px-5 md:px-8 xl:px-20">
+    <header className="flex w-full justify-between items-center bg-white px-5 py-2 border-b-2 border-b-foreground sm:px-5 md:px-8 xl:px-20">
       <Text fw={700} size="lg">
         Logo
       </Text>

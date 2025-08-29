@@ -1,3 +1,5 @@
+"use client";
+
 import { Group, HoverCard, NavLink, Text } from "@mantine/core";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -6,17 +8,12 @@ type HeaderLinkItem = { label: string; href: string };
 
 interface HeaderLinkProps {
   label: string;
-  href: string;
   items: HeaderLinkItem[];
   color?: string;
 }
 
-export function HeaderLink({
-  label,
-  href,
-  items,
-  color = "white",
-}: HeaderLinkProps) {
+export function HeaderLink({ label, items, color = "white" }: HeaderLinkProps) {
+  // ToDo: depois ajustar para o mobile também
   return (
     <HoverCard
       openDelay={80}
@@ -25,17 +22,15 @@ export function HeaderLink({
       position="bottom-start"
     >
       <HoverCard.Target>
-        <Link href={href}>
-          <Group gap={6} className="group items-center">
-            <Text fw={500} c={color}>
-              {label}
-            </Text>
-            <ChevronRight
-              size={16}
-              className="group-hover:rotate-90 group-active:rotate-90 transition font-medium"
-            />
-          </Group>
-        </Link>
+        <Group gap={6} className="group items-center cursor-pointer">
+          <Text fw={500} c={color}>
+            {label}
+          </Text>
+          <ChevronRight
+            size={16}
+            className="group-hover:rotate-90 group-active:rotate-90 transition font-medium"
+          />
+        </Group>
       </HoverCard.Target>
 
       <HoverCard.Dropdown p="xs">

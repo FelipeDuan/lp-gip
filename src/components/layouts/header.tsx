@@ -1,5 +1,3 @@
-"use client";
-
 import { Anchor, Button, Group, Text } from "@mantine/core";
 import { HeaderLink } from "./header-link";
 
@@ -23,11 +21,7 @@ export function Header() {
   return (
     <header className="flex items-center py-2 px-5 text-white justify-between bg-primary-600 w-full sm:px-5 md:px-8 xl:px-20">
       <div className="lg:hidden">
-        <HeaderLink
-          label="Projetos e Programas"
-          href="/projetos"
-          items={navMobile}
-        />
+        <HeaderLink label="Projetos e Programas" items={navMobile} />
       </div>
 
       <div className="hidden lg:flex">

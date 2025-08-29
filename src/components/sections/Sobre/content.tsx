@@ -15,6 +15,7 @@ export function SobreContent() {
         c="var(--color-neutral-default)"
         fz={{ base: "sm", md: "md" }}
         lh={1.6}
+        fw={500}
       >
         <Text span fw={700}>
           A Gestão do Investimento Público (GIP)
@@ -30,6 +31,7 @@ export function SobreContent() {
         c="var(--color-neutral-default)"
         fz={{ base: "sm", md: "md" }}
         lh={1.6}
+        fw={500}
       >
         Com base nas melhores práticas nacionais e internacionais, o GIP
         organiza os projetos em um{" "}
