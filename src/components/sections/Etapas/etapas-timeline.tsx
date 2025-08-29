@@ -30,7 +30,12 @@ export function EtapasTimeline() {
   ];
 
   return (
-    <Timeline active={2} bulletSize={28} lineWidth={2} color="primary">
+    <Timeline
+      active={etapas.length}
+      bulletSize={28}
+      lineWidth={2}
+      color="primary"
+    >
       {etapas.map((etapa, idx) => (
         <Timeline.Item
           key={`${idx}-${etapa.title}`}
