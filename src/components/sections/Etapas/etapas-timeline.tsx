@@ -44,7 +44,7 @@ export function EtapasTimeline() {
             px={20}
             py={20}
           >
-            <Text c={"primary"} fw={700} fz={{ base: 18, lg: 20 }}>
+            <Text c={"primary"} fw={700} fz={{ base: 16, lg: 18 }}>
               {etapa.title}
             </Text>
 
