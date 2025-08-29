@@ -1,4 +1,5 @@
-import { Card, Text, Timeline } from "@mantine/core";
+import { Timeline } from "@mantine/core";
+import { CardSection } from "@/components/ui/card-section";
 
 export function EtapasTimeline() {
   const etapas = [
@@ -42,25 +43,11 @@ export function EtapasTimeline() {
           bullet={idx + 1}
           lineVariant="dashed"
         >
-          <Card
-            bg={"var(--color-primary-50)"}
-            shadow="xs"
-            radius={12}
-            px={20}
-            py={20}
-          >
-            <Text c={"primary"} fw={700} fz={{ base: 16, lg: 18 }}>
-              {etapa.title}
-            </Text>
-
-            <Text
-              c={"var(--color-neutral-default)"}
-              fw={500}
-              fz={{ base: "sm", lg: "md" }}
-            >
-              {etapa.description}
-            </Text>
-          </Card>
+          <CardSection
+            variant="light"
+            title={etapa.title}
+            description={etapa.description}
+          />
         </Timeline.Item>
       ))}
     </Timeline>

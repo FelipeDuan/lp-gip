@@ -1,4 +1,4 @@
-import { Card, Text } from "@mantine/core";
+import { CardSection } from "@/components/ui/card-section";
 
 export function GovernanciaCards() {
   const cards = [
@@ -20,25 +20,15 @@ export function GovernanciaCards() {
   ];
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       {cards.map((card, idx) => (
-        <Card
+        <CardSection
           key={`${idx}-${card.title}`}
-          bg={"var(--color-surface)"}
-          shadow="xs"
-          radius={12}
-          px={20}
-          py={20}
-        >
-          <Text c={"white"} fw={700} fz={{ base: 16, lg: 18 }}>
-            {card.title}
-          </Text>
-
-          <Text c={"white"} fw={500} fz={{ base: "sm", lg: "md" }}>
-            {card.description}
-          </Text>
-        </Card>
+          title={card.title}
+          description={card.description}
+          variant="surface"
+        />
       ))}
-    </>
+    </div>
   );
 }

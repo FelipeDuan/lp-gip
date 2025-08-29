@@ -10,6 +10,7 @@
 
   /* cores do design system */
   --color-white: #ffffff;
+  --color-primary-10: #15719a1a;
   --color-primary-50: #edf8fd;
   --color-primary-100: #dbedf5;
   --color-primary-200: #b2daed;
@@ -21,6 +22,7 @@
   --color-primary-800: #003f5b;
   --color-primary-900: #063246;
 
+  --color-yellow-100: #fef9c3;
   --color-yellow-400: #facc15;
 
   --color-neutral-emphasis: #18181b;
