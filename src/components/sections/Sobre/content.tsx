@@ -1,22 +1,13 @@
-import { Badge, Stack, Text, Title } from "@mantine/core";
+import { Stack, Text, Title } from "@mantine/core";
+import { BagdeSection } from "@/components/ui/badge-section";
 
 export function SobreContent() {
   // ToDo: verificar se há como refatorar esse conteúdo
 
   return (
     <Stack gap={10}>
-      <Badge
-        variant="light"
-        color="yellow"
-        radius="sm"
-        size="lg"
-        tt="lowercase"
-        fw={600}
-      >
-        sobre
-      </Badge>
-
-      <Title order={2} fw={800} lh={1.2} fz={{ base: 24, md: 32 }}>
+      <BagdeSection>sobre</BagdeSection>
+      <Title order={2} fw={700} lh={1.2} fz={{ base: 24, md: 32 }}>
         O que é o GIP?
       </Title>
 
