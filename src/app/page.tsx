@@ -1,3 +1,4 @@
+import { ClassificacaoPage } from "@/components/sections/Classificacao/classificacao-page";
 import { EtapasPage } from "@/components/sections/Etapas/etapas-page";
 import { GovernanciaPage } from "@/components/sections/Governancia/governancia-page";
 import { Hero } from "@/components/sections/Hero/hero-page";
@@ -10,6 +11,7 @@ export default function Home() {
       <SobrePage />
       <EtapasPage />
       <GovernanciaPage />
+      <ClassificacaoPage />
     </>
   );
 }
