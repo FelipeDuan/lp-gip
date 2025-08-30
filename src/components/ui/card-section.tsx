@@ -5,7 +5,7 @@ interface CardSectionProps {
   title: string;
   description: string;
   variant: Variant;
-  className: string;
+  className?: string;
 }
 
 export function CardSection({
