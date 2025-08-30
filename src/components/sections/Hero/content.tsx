@@ -34,6 +34,7 @@ export function HeroContent() {
         c="var(--color-neutral-default)"
         fz="md"
         lh={1.6}
+        fw={500}
         maw={600}
       >
         O GIP é a metodologia que garante que cada investimento realizado pelo
