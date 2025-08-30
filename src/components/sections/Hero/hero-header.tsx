@@ -7,13 +7,17 @@ import Image from "next/image";
 import { AcessoExclusivoButton } from "./acesso-exclusivo-button";
 
 export function HeroHeader() {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
 
-  const navDesktop = [
-    { label: "Sobre" },
-    { label: "Etapas" },
-    { label: "Governancia" },
-    { label: "Classificação" },
+  const navItems = [
+    { label: "Sobre", id: "sobre", icon: <Info size={16} /> },
+    { label: "Etapas", id: "etapas", icon: <Layers size={16} /> },
+    { label: "Governancia", id: "governancia", icon: <MapIcon size={16} /> },
+    {
+      label: "Classificação",
+      id: "classificacao",
+      icon: <ListChecks size={16} />,
+    },
   ];
 
   return (
@@ -37,26 +41,32 @@ export function HeroHeader() {
 
           <Menu.Dropdown>
             <Menu.Label>Acesse</Menu.Label>
-            <Menu.Item leftSection={<Info size={16} />}>Sobre</Menu.Item>
-            <Menu.Item leftSection={<Layers size={16} />}>Etapas</Menu.Item>
-            <Menu.Item leftSection={<MapIcon size={16} />}>
-              Governancia
-            </Menu.Item>
-            <Menu.Item leftSection={<ListChecks size={16} />}>
-              Classificação
-            </Menu.Item>
+            {navItems.map((item) => (
+              <Menu.Item key={item.id} leftSection={item.icon}>
+                <Anchor
+                  href={`#${item.id}`}
+                  size="sm"
+                  fw={500}
+                  c="var(--color-neutral-default)"
+                  onClick={close}
+                >
+                  {item.label}
+                </Anchor>
+              </Menu.Item>
+            ))}
           </Menu.Dropdown>
         </Menu>
       </nav>
 
       <nav className="hidden lg:flex">
         <Group gap={"lg"}>
-          {navDesktop.map((item) => (
+          {navItems.map((item) => (
             <Anchor
               key={`item-${item.label}`}
               size="md"
               fw={500}
               c={"var(--color-neutral-default)"}
+              href={`#${item.id}`}
             >
               {item.label}
             </Anchor>

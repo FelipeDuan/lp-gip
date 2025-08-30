@@ -107,3 +107,7 @@
     --fs-body: 18px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
