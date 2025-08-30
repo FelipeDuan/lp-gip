@@ -1,4 +1,5 @@
-import { Anchor, Button, Group, Text } from "@mantine/core";
+import { Anchor, Button, Group } from "@mantine/core";
+import Image from "next/image";
 import { HeaderLink } from "./header-link";
 
 export function Header() {
@@ -47,9 +48,16 @@ export function Header() {
         </Group>
       </div>
 
-      <Text fw={700} size="lg">
-        Logo
-      </Text>
+      <div className="flex items-center">
+        <Image
+          src="/SEPLAN.svg"
+          alt="Logo da SEPLAN"
+          width={160}
+          height={48}
+          priority
+          className="h-12 w-auto"
+        />
+      </div>
     </header>
   );
 }

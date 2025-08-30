@@ -9,6 +9,7 @@
   --breakpoint-*: initial;
 
   /* cores do design system */
+  --color-black: #231f20;
   --color-white: #ffffff;
   --color-primary-10: #15719a1a;
   --color-primary-50: #edf8fd;

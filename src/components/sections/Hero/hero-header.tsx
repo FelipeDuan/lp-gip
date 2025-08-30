@@ -1,11 +1,13 @@
 "use client";
 
-import { Anchor, Burger, Drawer, Group, Text } from "@mantine/core";
+import { Anchor, Burger, Group, Menu } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Lock } from "lucide-react";
+import { Info, Layers, ListChecks, MapIcon } from "lucide-react";
+import Image from "next/image";
+import { AcessoExclusivoButton } from "./acesso-exclusivo-button";
 
 export function HeroHeader() {
-  const [opened, { open, close }] = useDisclosure();
+  const [opened, { toggle }] = useDisclosure();
 
   const navDesktop = [
     { label: "Sobre" },
@@ -16,25 +18,35 @@ export function HeroHeader() {
 
   return (
     <header className="flex w-full justify-between items-center bg-white px-5 py-2 border-b-2 border-b-foreground sm:px-5 md:px-8 xl:px-20">
-      <Text fw={700} size="lg">
-        Logo
-      </Text>
+      <div className="flex items-center">
+        <Image
+          src="/Projetos.svg"
+          alt="Logo do GIP"
+          width={160}
+          height={48}
+          priority
+          className="h-12 w-auto"
+        />
+      </div>
 
       <nav className="flex lg:hidden">
-        <Burger opened={opened} onClick={open} color="primary" />
+        <Menu shadow="md" width={200}>
+          <Menu.Target>
+            <Burger opened={opened} onClick={toggle} color="primary" />
+          </Menu.Target>
 
-        <Drawer
-          offset={8}
-          radius={"md"}
-          opened={opened}
-          onClose={close}
-          position="right"
-          title="Menu"
-        >
-          {
-            // ToDo: aqui eu preencho depois
-          }
-        </Drawer>
+          <Menu.Dropdown>
+            <Menu.Label>Acesse</Menu.Label>
+            <Menu.Item leftSection={<Info size={16} />}>Sobre</Menu.Item>
+            <Menu.Item leftSection={<Layers size={16} />}>Etapas</Menu.Item>
+            <Menu.Item leftSection={<MapIcon size={16} />}>
+              Governancia
+            </Menu.Item>
+            <Menu.Item leftSection={<ListChecks size={16} />}>
+              Classificação
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
       </nav>
 
       <nav className="hidden lg:flex">
@@ -50,13 +62,7 @@ export function HeroHeader() {
             </Anchor>
           ))}
 
-          <button
-            type="button"
-            className="flex justify-between items-center px-5 py-2 gap-2 rounded-md bg-primary-600 text-white cursor-pointer shadow  hover:bg-primary-700"
-          >
-            <Lock size={16} />
-            acesso exclusivo
-          </button>
+          <AcessoExclusivoButton />
         </Group>
       </nav>
     </header>
