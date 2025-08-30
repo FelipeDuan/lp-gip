@@ -1,16 +1,26 @@
 import { Anchor, Button, Group } from "@mantine/core";
 import Image from "next/image";
+import Link from "next/link";
 import { HeaderLink } from "./header-link";
 
 export function Header() {
   const navItems = [
-    { label: "Diálogos", href: "/dialogos" },
-    { label: "OPA", href: "/opa" },
-    { label: "dadosPI", href: "/dadosPI" },
-    { label: "Pactos pelo Piauí", href: "/pactos-pelo-piaui" },
-    { label: "Retribuir", href: "/retribuir" },
-    { label: "PSI", href: "/psi" },
-    { label: "Pilares", href: "/pilares" },
+    { label: "Diálogos", href: "https://dialogos.seplan.pi.gov.br/" },
+    { label: "OPA", href: "https://opa.seplan.pi.gov.br/" },
+    { label: "dadosPI", href: "https://dados.gov.br/home" },
+    {
+      label: "Pactos pelo Piauí",
+      href: "https://pactospelopiaui.seplan.pi.gov.br/",
+    },
+    {
+      label: "Retribuir",
+      href: "https://www.seplan.pi.gov.br/projetos/retribuir/",
+    },
+    { label: "PSI", href: "https://psi.seplan.pi.gov.br/" },
+    {
+      label: "Pilares",
+      href: "https://www.seplan.pi.gov.br/projetos/pilares-ii/",
+    },
   ];
 
   return (
@@ -21,17 +31,20 @@ export function Header() {
 
       <div className="hidden lg:flex">
         <Group justify="center" gap={"lg"}>
-          <Button
-            variant="default"
-            radius={"md"}
-            c={"var(--color-neutral-default)"}
-          >
-            Site da Seplan
-          </Button>
+          <Link href={"https://www.seplan.pi.gov.br/"}>
+            <Button
+              variant="default"
+              radius={"md"}
+              c={"var(--color-neutral-default)"}
+            >
+              Site da Seplan
+            </Button>
+          </Link>
 
           {navItems.map((item) => (
             <Anchor
               key={`item-${item.label}`}
+              href={item.href}
               underline="hover"
               c={"white"}
               size="md"
