@@ -25,4 +25,14 @@ export const theme: MantineThemeOverride = {
     lg: rem(18),
     xl: rem(22),
   },
+  defaultRadius: "md",
+  components: {
+    Card: {
+      styles: {
+        root: {
+          borderColor: "var(--color-primary-500)", // qualquer var CSS tua
+        },
+      },
+    },
+  },
 };
