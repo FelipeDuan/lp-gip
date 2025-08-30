@@ -1,7 +1,7 @@
 "use client";
 
 import { Group, Menu, Text } from "@mantine/core";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 type HeaderLinkItem = { label: string; href: string };
@@ -25,6 +25,7 @@ export function HeaderLink({ label, items, color = "white" }: HeaderLinkProps) {
       </Menu.Target>
 
       <Menu.Dropdown>
+        <Menu.Label>Outros Links</Menu.Label>
         {items.map((item, idx) => (
           <Link href={item.href} key={`${idx}-${item.label}`}>
             <Menu.Item>{item.label}</Menu.Item>

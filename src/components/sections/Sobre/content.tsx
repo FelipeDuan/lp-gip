@@ -2,8 +2,6 @@ import { Stack, Text, Title } from "@mantine/core";
 import { BagdeSection } from "@/components/ui/badge-section";
 
 export function SobreContent() {
-  // ToDo: verificar se há como refatorar esse conteúdo
-
   return (
     <Stack gap={10}>
       <BagdeSection>sobre</BagdeSection>

@@ -1,17 +1,16 @@
-import { Group, Text, Title } from "@mantine/core";
+import { Stack, Text, Title } from "@mantine/core";
 import { HeroActionButtons } from "./action-buttons";
 
 export function HeroContent() {
   return (
-    <Group justify="center" gap={32}>
-      <Group justify="center" gap={16}>
-        {/* Títulos */}
+    <Stack align="center" gap="lg">
+      <Stack align="center" gap="sm">
         <Title
           order={1}
           ta="center"
           fw={700}
           lh={1.2}
-          fz={{ base: 32, md: 44, lg: 52 }}
+          fz={{ base: 32, md: 44, lg: 52, xl: 64 }}
         >
           Investimento Público
         </Title>
@@ -21,23 +20,21 @@ export function HeroContent() {
           ta="center"
           fw={700}
           lh={1.2}
-          fz={{ base: 32, md: 44, lg: 52 }}
+          fz={{ base: 32, md: 44, lg: 52, xl: 64 }}
         >
           que{" "}
-          <Text component="span" inherit c={"primary"}>
+          <Text span inherit c="primary">
             Transforma o Piauí
           </Text>
         </Title>
-      </Group>
+      </Stack>
 
-      {/* Parágrafo */}
       <Text
         ta="center"
         c="var(--color-neutral-default)"
-        fz={{ base: "md", md: "md " }}
+        fz="md"
         lh={1.6}
-        mx="auto"
-        style={{ maxWidth: 600 }}
+        maw={600}
       >
         O GIP é a metodologia que garante que cada investimento realizado pelo
         Estado gere desenvolvimento, qualidade de vida e mais oportunidades para
@@ -45,6 +42,6 @@ export function HeroContent() {
       </Text>
 
       <HeroActionButtons />
-    </Group>
+    </Stack>
   );
 }
