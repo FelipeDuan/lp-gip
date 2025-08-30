@@ -3,27 +3,20 @@ import Image from "next/image";
 import { HeaderLink } from "./header-link";
 
 export function Header() {
-  const navMobile = [
+  const navItems = [
     { label: "Diálogos", href: "/dialogos" },
     { label: "OPA", href: "/opa" },
     { label: "dadosPI", href: "/dadosPI" },
     { label: "Pactos pelo Piauí", href: "/pactos-pelo-piaui" },
-  ];
-
-  const navDesktop = [
-    { label: "Diálogos" },
-    { label: "OPA" },
-    { label: "dadosPI" },
-    { label: "Pactos pelo Piauí" },
-    { label: "Retribuir" },
-    { label: "PSI" },
-    { label: "Pilares" },
+    { label: "Retribuir", href: "/retribuir" },
+    { label: "PSI", href: "/psi" },
+    { label: "Pilares", href: "/pilares" },
   ];
 
   return (
     <header className="flex items-center py-2 px-5 text-white justify-between bg-primary-600 w-full sm:px-5 md:px-8 xl:px-20">
       <div className="lg:hidden">
-        <HeaderLink label="Projetos e Programas" items={navMobile} />
+        <HeaderLink label="Projetos e Programas" items={navItems} />
       </div>
 
       <div className="hidden lg:flex">
@@ -36,7 +29,7 @@ export function Header() {
             Site da Seplan
           </Button>
 
-          {navDesktop.map((item) => (
+          {navItems.map((item) => (
             <Anchor
               key={`item-${item.label}`}
               underline="hover"
