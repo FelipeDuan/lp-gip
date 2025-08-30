@@ -5,10 +5,12 @@ interface CardSectionProps {
   title: string;
   description: string;
   variant: Variant;
+  className: string;
 }
 
 export function CardSection({
   title,
+  className,
   description,
   variant = "primary",
 }: CardSectionProps) {
@@ -18,7 +20,14 @@ export function CardSection({
   const descriptionColor = preset.desc;
 
   return (
-    <Card bg={bgColor} shadow="xs" radius={12} px={20} py={20}>
+    <Card
+      bg={bgColor}
+      shadow="xs"
+      radius={12}
+      px={20}
+      py={20}
+      className={className}
+    >
       <Text c={titleColor} fw={700} fz={{ base: 16, lg: 18 }}>
         {title}
       </Text>
