@@ -4,7 +4,6 @@ import { SobreContent } from "./content";
 import { SobreImagemLateral } from "./imagem-lateral";
 
 export function SobrePage() {
-  // ToDo: depois eu tenho que refatorar isso aqui
   return (
     <section className="pt-16 pb-8 px-5 bg-white md:pt-24 md:pb-12 md:px-8 lg:pt-32 lg:pb-20 lg:px-16 xl:px-20">
       <div className="mx-auto">

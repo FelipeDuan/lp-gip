@@ -4,9 +4,10 @@ import { HeaderLink } from "./header-link";
 
 export function Header() {
   const navMobile = [
-    { label: "Projetos e Programas", href: "/projetos" },
     { label: "Diálogos", href: "/dialogos" },
     { label: "OPA", href: "/opa" },
+    { label: "dadosPI", href: "/dadosPI" },
+    { label: "Pactos pelo Piauí", href: "/pactos-pelo-piaui" },
   ];
 
   const navDesktop = [
